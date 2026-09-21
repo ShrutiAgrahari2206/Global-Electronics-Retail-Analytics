@@ -1,0 +1,178 @@
+# Global Electronics Retail Business Analytics
+
+## Project Objective
+
+Analyze global electronics retail sales data to understand revenue, profitability, customer distribution, 
+product performance, and store performance using Excel and Power BI.
+
+## Dataset
+
+Source: Maven Analytics – Global Electronics Retailer dataset
+
+The dataset contains information about customers, products, sales transactions, stores, and exchange rates.
+
+### Main Tables
+
+- Customers – customer demographics and location details
+- Products – product, brand, category, cost, and price information
+- Sales – orders, dates, customers, products, quantities, and currencies
+- Stores – store location, size, and opening-date information
+- Exchange Rates – daily currency exchange rates
+
+## Tools Used
+
+- Excel – Data cleaning and validation
+- Power BI – Data modeling, DAX calculations, and dashboard development
+- DAX – Business metrics and KPI calculations
+
+## Data Cleaning & Preparation
+
+The raw datasets were cleaned and validated in Excel before being imported into Power BI.
+
+Key cleaning steps included:
+
+- Removed unnecessary leading and trailing spaces from text fields.
+- Checked and handled blank values.
+- Checked duplicate records and key columns for uniqueness.
+- Converted date fields into proper date format.
+- Converted numeric fields such as cost, price, quantity, and exchange rates into numeric data types.
+- Validated product prices and costs for consistency.
+- Checked sales quantities to ensure they were positive.
+- Validated currency codes and key fields.
+- Retained valid blank values where they represented meaningful business cases, such as delivery dates for 
+  undelivered orders and store area for the online store.
+- Created matching date-currency keys for connecting sales transactions with exchange-rate data.
+
+## Power BI Data Model
+
+The cleaned datasets were imported into Power BI and connected using relationships between primary and 
+foreign keys.
+
+### Relationships
+
+- Customers → Sales: CustomerKey
+- Products → Sales: ProductKey
+- Stores → Sales: StoreKey
+- Exchange Rates → Sales: Date + Currency
+- Date Table → Sales: Order Date
+
+The data model was designed to support accurate filtering and analysis across customers, products, 
+stores, dates, and currencies.
+
+## DAX Measures
+
+The following DAX measures were created in Power BI to calculate key business metrics:
+
+- Total Revenue – Calculates total sales revenue using quantity sold and product unit price.
+- Total Cost – Calculates total product cost using quantity sold and product unit cost.
+- Total Profit – Calculates revenue minus total cost.
+- Profit Margin % – Calculates profit as a percentage of revenue.
+- Total Units Sold – Calculates the total quantity of products sold.
+- Total Orders – Counts unique sales orders.
+- Average Order Value – Calculates average revenue per order.
+- Total Customers – Counts unique customers who placed orders.
+- Revenue per Square Meter – Calculates revenue generated per square meter of store space.
+
+## Dashboard Overview
+
+The Power BI dashboard was organized into three analytical pages:
+
+### Page 1 – Executive Overview
+- Key performance indicators (KPIs)
+- Revenue trend by Year-Month
+- Revenue by Country
+- Revenue by Category
+
+### Page 2 – Product & Profitability Analysis
+- Revenue by Category
+- Revenue by Subcategory
+- Revenue by Brand
+- Profit by Category
+- Profit by Subcategory
+- Top 10 Products by Revenue
+- Revenue vs Profit analysis
+- Profit Margin by Category
+
+### Page 3 – Customer & Store Analysis
+- Total Customers
+- Customer Distribution by Country
+- Top 10 Customers by Revenue
+- Revenue by State
+- Store Size vs Revenue
+- Revenue per Square Meter
+
+## Key Performance Indicators
+
+- Total Revenue: 55.76M
+- Total Profit: 32.66M
+- Total Orders: 26K
+- Total Units Sold: 198K
+- Average Order Value: 2.12K
+- Profit Margin: 58.58%
+- Total Customers: 12K
+- Revenue per Square Meter: 602.47
+
+## Project Workflow
+
+1. Collected and reviewed the raw datasets.
+2. Cleaned and validated the data using Excel.
+3. Prepared the cleaned datasets for analysis.
+4. Imported the data into Power BI.
+5. Created relationships between the analytical tables.
+6. Built a Date Table for time-based analysis.
+7. Created DAX measures for KPIs and business metrics.
+8. Developed an interactive three-page Power BI dashboard.
+9. Analyzed business performance and identified key insights.
+10. Developed business recommendations based on the analysis.
+
+## Business Questions
+
+1. Which product categories and subcategories generate the most revenue and profit?
+2. Which brands contribute the most revenue?
+3. Which countries and states generate the highest revenue?
+4. How are customers distributed across countries?
+5. How does store size relate to revenue?
+6. What business actions can be derived from the analysis?
+
+
+
+
+1. Category Performance
+Computers is the highest-revenue category and also generates the highest profit among all product categories.
+2. Subcategory Performance
+Desktops generate the highest profit among the product subcategories analyzed.
+3. Brand Performance
+Adventure Works generates the highest revenue among the brands analyzed.
+4. Country Performance
+The United States generates the highest revenue among the countries analyzed.
+5. State Performance
+California generates the highest revenue among the states analyzed.
+6. Customer Distribution
+The United States accounts for the largest share of customers, followed by the United Kingdom and Canada.
+7. Store Size & Revenue
+Larger stores generally tend to generate higher revenue, although the relationship is not perfectly 
+consistent across all stores.
+
+Business Recommendations:-
+
+1. Focus on Computers
+Since Computers contribute the highest revenue and profit, the business should closely monitor inventory, 
+pricing, and sales performance within this category.
+2. Monitor Desktop Profitability
+Since Desktops generate the highest profit among subcategories, the business should closely track their
+sales volume, pricing, costs, and inventory availability.
+3. Monitor the U.S. Market
+The U.S. is the largest revenue-generating and customer-contributing market, so the business should 
+closely monitor U.S. sales, customer demand, and regional performance.
+4. Monitor State-Level Performance
+California generates the highest revenue among the states analyzed, so the business should monitor 
+its sales trends, customer demand, and product performance at the state level.
+5. Evaluate Store Performance Beyond Size
+Since larger stores generally generate higher revenue but store size alone does not explain performance, 
+the business should evaluate revenue efficiency alongside store size.
+6. Monitor High-Revenue Brands
+Adventure Works generates the highest revenue among the brands analyzed, so the business should monitor 
+its sales trends, product demand, and contribution to overall revenue.
+
+
+
